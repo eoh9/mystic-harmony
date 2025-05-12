@@ -1,0 +1,23 @@
+# Python 캐시 파일
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 가상 환경
+venv/
+env/
+.env
+
+# Streamlit 캐시 및 설정
+.streamlit/
+
+# 시스템 파일
+.DS_Store
+Thumbs.db
+
+# 로그 파일
+*.log
+
+# 개인 노트 및 설정
+notes.txt
+config.local.yaml 
