@@ -1,69 +1,58 @@
-# Mystic Harmony - Eastern & Western Astrology Combined
+# Mystic Harmony
 
-A Streamlit application that combines Eastern and Western astrology traditions to provide personalized fortune readings and partner compatibility analysis, enhanced with GPT-4.1-mini.
+동양과 서양의 점성술을 결합한 운세 서비스 웹 애플리케이션입니다.
 
-## Features
+## 기능
 
-- **Combined Fortune Reading**: Integrates Eastern Four Pillars (사주팔자), Chinese Zodiac (십이지간), Five Elements (오행), and Western Zodiac to create comprehensive readings
-- **Personality Analysis**: Detailed breakdown of character traits, element balance, and life path
-- **Partner Compatibility**: 간ind your ideal partner profile based on astrological compatibility
-- **Visual Partner Generation**: Artistic representation of your ideal partner based on astrological calculations
-- **Interactive User Interface**: Easy-to-use Streamlit interface with intuitive navigation
-- **GPT-4.1-mini Integration**: Enhanced descriptions and storytelling powered by OpenAI's GPT models
+- **운세 분석**: 사용자의 생년월일과 태어난 시간을 기반으로 운세를 분석합니다.
+- **간단 모드와 고급 모드**: 기본적인 운세부터 심도 있는 분석까지 선택할 수 있습니다.
+- **파트너 매칭**: 사용자와 가장 잘 맞는 파트너의 특성을 제시합니다.
+- **시각화**: 파트너의 얼굴을 시각적으로 생성합니다.
 
-## Setup
+## 설치 방법
 
-1. Clone this repository:
+1. 저장소를 클론합니다:
 ```
-git clone <repository-url>
+git clone https://github.com/eoh9/mystic-harmony.git
 cd mystic-harmony
 ```
 
-2. Install dependencies:
+2. 필요한 패키지를 설치합니다:
 ```
 pip install -r requirements.txt
 ```
 
-3. Configure environment variables:
-   - Copy `.env.example` to `.env`
-   - Add your OpenAI API key in the `.env` file
-   - The app uses GPT-4.1-mini model for enhanced descriptions
+3. `.env` 파일에 OpenAI API 키를 설정합니다:
+```
+OPENAI_API_KEY=your_api_key_here
+```
 
-4. Run the application:
+## 실행 방법
+
+다음 명령어로 앱을 실행합니다:
 ```
 streamlit run app.py
 ```
 
-## File Structure
+브라우저에서 http://localhost:8501 으로 접속하여 앱을 사용할 수 있습니다.
 
-- `app.py`: Main Streamlit application
-- `fortune_engine.py`: Core calculations for Eastern and Western astrology
-- `partner_matcher.py`: Algorithms for partner compatibility
-- `face_generator.py`: Visualization of ideal partner profile
-- `gpt_enhancer.py`: OpenAI integration for enhanced descriptions
-- `requirements.txt`: Dependencies
-- `.env`: Configuration (API keys, etc.)
+## 프로젝트 구조
 
-## Technologies
+- `app.py`: 메인 Streamlit 애플리케이션
+- `fortune_engine.py`: 운세 분석 엔진
+- `partner_matcher.py`: 파트너 매칭 시스템
+- `face_generator.py`: 파트너 얼굴 생성기
+- `gpt_enhancer.py`: GPT를 활용한 텍스트 강화 모듈
 
-- **Streamlit**: Front-end framework
-- **Python**: Backend logic
-- **Pillow**: Image processing for face generation
-- **Plotly**: Visualization of element balance
-- **OpenAI GPT-4.1-mini**: Enhanced storytelling and descriptions
+## 개발 환경
 
-## Usage
+- Python 3.9+
+- Streamlit
+- OpenAI API
+- Pandas, NumPy
+- ephem (천문학 계산)
+- PIL (이미지 처리)
 
-1. Enter your birth date and approximate time
-2. View your combined Eastern and Western astrological profile with rich descriptions
-3. Explore compatibility with potential partners through detailed narratives
-4. Generate a visual representation of your ideal partner
-5. Experience poetic meeting scenarios powered by GPT
+## 라이센스
 
-## Future Enhancements
-
-- Enhanced GPT integration for more detailed storytelling
-- Historical fortune analysis
-- Real-time astrological events and their impact
-- Fortune predictions for specific future time periods
-- Mobile app version 
+MIT 라이센스를 따릅니다.
